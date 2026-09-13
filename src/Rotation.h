@@ -17,7 +17,7 @@ namespace ModRotation
     {
         bool   Enabled           = true;
         uint32 SpellId           = 47322;
-        bool   AutoLearn         = true;
+        bool   AutoLearn         = false;
         bool   Announce          = false;
         std::string AnnounceMessage;
         uint32 AoeThreshold      = 2;

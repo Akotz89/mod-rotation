@@ -212,7 +212,7 @@ public:
     {
         config.Enabled             = sConfigMgr->GetOption<bool>("Rotation.Enable", true);
         config.SpellId             = sConfigMgr->GetOption<uint32>("Rotation.SpellId", 47322);
-        config.AutoLearn           = sConfigMgr->GetOption<bool>("Rotation.AutoLearn", true);
+        config.AutoLearn           = sConfigMgr->GetOption<bool>("Rotation.AutoLearn", false);
         config.Announce            = sConfigMgr->GetOption<bool>("Rotation.Announce", false);
         config.AnnounceMessage     = sConfigMgr->GetOption<std::string>("Rotation.Announce.Message",
             "One-button |cff4CFF00Rotation|r module active: place the Rotation spell from your spellbook on your action bar.");
