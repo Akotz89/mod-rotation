@@ -31,10 +31,10 @@ Rotation.SpellId = 47322
 #    Rotation.AutoLearn
 #        Description: Automatically teaches the trigger spell to every player
 #                     on login (all classes).
-#        Default: 1
+#        Default: 0
 #
 
-Rotation.AutoLearn = 1
+Rotation.AutoLearn = 0
 
 #
 #    Rotation.Announce

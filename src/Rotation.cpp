@@ -22,7 +22,7 @@ uint32 MaxRank(Player* p, uint32 firstRankId)
 {
     uint32 best = 0;
     for (SpellInfo const* info = sSpellMgr->GetSpellInfo(firstRankId); info; info = info->GetNextRankSpell())
-        if (p->HasSpell(info->Id))
+        if (p->HasActiveSpell(info->Id))
             best = info->Id;
 
     return best;
@@ -39,7 +39,7 @@ static bool CanPayCost(Player* p, SpellInfo const* info)
 
 static bool ReadyToCast(Player* p, SpellInfo const* info)
 {
-    if (!info)
+    if (!info || !p->HasActiveSpell(info->Id))
         return false;
 
     if (p->HasSpellCooldown(info->Id))
@@ -134,7 +134,7 @@ void EngageRanged(Ctx& c)
     PetAttack(c);
 
     // Tir automatique (75) pour les chasseurs
-    if (c.me->getClass() == CLASS_HUNTER && !c.me->GetCurrentSpell(CURRENT_AUTOREPEAT_SPELL))
+    if (c.me->getClass() == CLASS_HUNTER && c.me->HasActiveSpell(75) && !c.me->GetCurrentSpell(CURRENT_AUTOREPEAT_SPELL))
         c.me->CastSpell(c.target, 75, false);
 }
 
