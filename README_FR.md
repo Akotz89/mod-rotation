@@ -35,8 +35,10 @@ ses améliorations avec la communauté.
 
 Par défaut : **47322 « Dragonblight Test Spell 02 »**, un sort de test Blizzard
 inutilisé, présent dans le `Spell.dbc` du client 3.3.5a : instantané, coût nul,
-aucune recharge, GCD 0, un seul effet *Dummy* inoffensif. Tous les joueurs
-l'apprennent à la connexion (`Rotation.AutoLearn = 1`).
+aucune recharge, GCD 0, un seul effet *Dummy* inoffensif. L'apprentissage
+automatique à la connexion est désactivé par défaut ; définissez
+`Rotation.AutoLearn = 1` pour l'enseigner aux joueurs à la connexion lorsque
+le module est activé.
 
 Le renommage en « Rotation » (et l'icône) se fait côté client par un mini-patch
 MPQ : éditer le nom du sort 47322 dans `DBFilesClient\Spell.dbc` (WDBX Editor,

@@ -34,8 +34,9 @@ the friendly way to share improvements with the community.
 
 Default: **47322 "Dragonblight Test Spell 02"**, an unused Blizzard test spell
 present in the 3.3.5a client `Spell.dbc`: instant, no cost, no cooldown, no
-GCD, a single harmless *Dummy* effect. Every player learns it on login
-(`Rotation.AutoLearn = 1`).
+GCD, a single harmless *Dummy* effect. Automatic learning on login is disabled
+by default; when the module is enabled, set `Rotation.AutoLearn = 1` to teach it
+to players on login.
 
 Renaming it to "Rotation" (and changing its icon) is done client-side with a
 small MPQ patch: edit the name of spell 47322 in `DBFilesClient\Spell.dbc`
